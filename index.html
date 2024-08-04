@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholar's Battlegrounds</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Scholar's Battlegrounds</h1>
+        <p>Slogan: Pay, Win, Earn</p>
+    </header>
+    
+    <main>
+        <!-- M-Pesa Form -->
+        <section id="mpesa">
+            <h2>M-Pesa</h2>
+            <form id="mpesa-form" action="#">
+                <label for="mpesa-phone">Phone Number:</label>
+                <input type="text" id="mpesa-phone" name="phone" required>
+                <button type="button" class="send-request-btn">Send Request</button>
+            </form>
+        </section>
+
+        <!-- PayPal Form -->
+        <section id="paypal">
+            <h2>PayPal</h2>
+            <form id="paypal-form" action="#">
+                <label for="paypal-phone">Phone Number:</label>
+                <input type="text" id="paypal-phone" name="phone" required>
+                <button type="button" class="send-request-btn">Send Request</button>
+            </form>
+        </section>
+
+        <!-- Apple Pay Form -->
+        <section id="applepay">
+            <h2>Apple Pay</h2>
+            <form id="applepay-form" action="#">
+                <label for="applepay-phone">Phone Number:</label>
+                <input type="text" id="applepay-phone" name="phone" required>
+                <button type="button" class="send-request-btn">Send Request</button>
+            </form>
+        </section>
+
+        <!-- Participation Code Input -->
+        <section id="participation-code">
+            <h2>Enter Your Participation Code</h2>
+            <label for="participation-code-input">Participation Code:</label>
+            <input type="text" id="participation-code-input" name="participation-code" required>
+            <button type="button" id="enter-competition-btn">Enter Competition</button>
+        </section>
+    </main>
+
+    <!-- Pop-up Modal -->
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>After paying, a participation code will be sent to you. Enter it in the box below.</p>
+            <button type="button" id="modal-ok-btn">Okay</button>
+        </div>
+    </div>
+
+    <!-- Enter Competition Modal -->
+    <div id="competition-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>You will be redirected to the competition shortly</p>
+            <div class="loader"></div>
+            <p style="color: lightgrey; font-style: italic;">"finding a scholar"</p>
+        </div>
+    </div>
+
+    <!-- Loading Modal -->
+    <div id="loading-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><em>Finding a scholar</em></p>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

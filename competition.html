@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="participant" id="you">
+            <h2>You</h2>
+            <div class="score" id="you-score">Score: 0</div>
+            <div class="questions">
+                <div class="question">
+                    <p>Question 1: What is the capital of France?</p>
+                    <button class="choice" onclick="selectChoice(this, 'you', 'Paris', 'Question 1')">Paris</button>
+                    <button class="choice" onclick="selectChoice(this, 'you', 'London', 'Question 1')">London</button>
+                    <button class="choice" onclick="selectChoice(this, 'you', 'Rome', 'Question 1')">Rome</button>
+                </div>
+                <div class="question">
+                    <p>Question 2: What is 2+2?</p>
+                    <button class="choice" onclick="selectChoice(this, 'you', '4', 'Question 2')">4</button>
+                    <button class="choice" onclick="selectChoice(this, 'you', '22', 'Question 2')">22</button>
+                    <button class="choice" onclick="selectChoice(this, 'you', '5', 'Question 2')">5</button>
+                </div>
+                <div class="question">
+                    <p>Question 3: Who wrote "To Kill a Mockingbird"?</p>
+                    <button class="choice" onclick="selectChoice(this, 'you', 'Harper Lee', 'Question 3')">Harper Lee</button>
+                    <button class="choice" onclick="selectChoice(this, 'you', 'J.K. Rowling', 'Question 3')">J.K. Rowling</button>
+                    <button class="choice" onclick="selectChoice(this, 'you', 'Ernest Hemingway', 'Question 3')">Ernest Hemingway</button>
+                </div>
+                <div class="question">
+                    <p>Question 4: What is the boiling point of water?</p>
+                    <button class="choice" onclick="selectChoice(this, 'you', '100°C', 'Question 4')">100°C</button>
+                    <button class="choice" onclick="selectChoice(this, 'you', '0°C', 'Question 4')">0°C</button>
+                    <button class="choice" onclick="selectChoice(this, 'you', '50°C', 'Question 4')">50°C</button>
+                </div>
+                <div class="question">
+                    <p>Question 5: What is the largest planet in our solar system?</p>
+                    <button class="choice" onclick="selectChoice(this, 'you', 'Jupiter', 'Question 5')">Jupiter</button>
+                    <button class="choice" onclick="selectChoice(this, 'you', 'Earth', 'Question 5')">Earth</button>
+                    <button class="choice" onclick="selectChoice(this, 'you', 'Mars', 'Question 5')">Mars</button>
+                </div>
+            </div>
+        </div>
+        <div class="participant" id="opponent">
+            <h2>Opponent</h2>
+            <div class="score" id="opponent-score">Score: 0</div>
+            <div class="questions">
+                <div class="question">
+                    <p>Question 1: What is the capital of France?</p>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', 'Paris', 'Question 1')">Paris</button>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', 'London', 'Question 1')">London</button>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', 'Rome', 'Question 1')">Rome</button>
+                </div>
+                <div class="question">
+                    <p>Question 2: What is 2+2?</p>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', '4', 'Question 2')">4</button>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', '22', 'Question 2')">22</button>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', '5', 'Question 2')">5</button>
+                </div>
+                <div class="question">
+                    <p>Question 3: Who wrote "To Kill a Mockingbird"?</p>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', 'Harper Lee', 'Question 3')">Harper Lee</button>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', 'J.K. Rowling', 'Question 3')">J.K. Rowling</button>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', 'Ernest Hemingway', 'Question 3')">Ernest Hemingway</button>
+                </div>
+                <div class="question">
+                    <p>Question 4: What is the boiling point of water?</p>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', '100°C', 'Question 4')">100°C</button>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', '0°C', 'Question 4')">0°C</button>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', '50°C', 'Question 4')">50°C</button>
+                </div>
+                <div class="question">
+                    <p>Question 5: What is the largest planet in our solar system?</p>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', 'Jupiter', 'Question 5')">Jupiter</button>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', 'Earth', 'Question 5')">Earth</button>
+                    <button class="choice" onclick="selectChoice(this, 'opponent', 'Mars', 'Question 5')">Mars</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timer-display">Time left: 9s</div> <!-- Timer display -->
+    <script src="competition.js"></script>
+</body>
+</html>

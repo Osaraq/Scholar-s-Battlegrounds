@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack vertically on small screens */
+    width: 100%;
+    height: 100%;
+    max-width: 1200px; /* Adjust to your needs */
+    max-height: 600px; /* Adjust to your needs */
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Split horizontally on large screens */
+    }
+}
+
+.participant {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.participant h2 {
+    margin-top: 0;
+}
+
+.score {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.questions .question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    margin: 0 0 10px;
+}
+
+.choice {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745; /* Green */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+}
+
+.choice:disabled {
+    background-color: #ccc; /* Gray */
+    cursor: not-allowed;
+}
+
+.choice:hover {
+    background-color: #218838; /* Darker green */
+}
+
+.choice:active {
+    background-color: #1e7e34; /* Even darker green */
+}
+
+.choice.clicked {
+    background-color: blue; /* Blue for clicked */
+    color: white;
+}
